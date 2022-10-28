@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Rosario&display=swap');
+
+.homePage{
+    background-color:#E0CABC;
+    font-family: 'Raleway', sans-serif;
+} 
+
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-section h1{
+    font-family: 'Rosario', sans-serif;
+    margin-left: -80px;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 55px;
+    text-align: center;
+}
+.start-card{
+    padding: 50px;
+    margin-left: -80px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.start-card h2{
+    color: #373434;
+    font-size: 35px;
+    font-weight: 600;
+}
+.start-card p{
+    color: #373434;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+}
+.start-card a{
+    padding: 22px 180px;
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #000000;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+/* ---------------------------
+             MCQ Page   
+------------------------------ */
+
+.mcqPage{
+    background-color: #B0B8FF;
+    font-family: 'Raleway', sans-serif;
+}
+.mcqBox{
+    padding: 25px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 773px;
+    margin-top: 25px;
+}
+.mcq-part{
+    display: grid;
+    justify-content: center;
+}
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.finishButton{
+    padding: 12px 80px;
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #000000;
+    border-radius: 5px;
+    display: inline-block;
+}
+.mcqBox h1{
+    font-weight: 700;
+    font-size: 30px;
+}
+.mcqBox li{
+    list-style: none;
+    font-weight: 400;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+.mcqBox input{
+    height:25px;
+    width:25px;
+    margin-right: 10px;
+}
+
