@@ -49,10 +49,10 @@ const QuizQuestion = [
         "options": [
             "I eat rice",
             "I was eating rice",
-            "I have eaten rice",
+            "I had eaten rice",
             "I have been eating rice for 1 year"
         ],
-        "answer": "I have eaten rice"
+        "answer": "I had eaten rice"
     },
     {
         "title": "Which sentence is past perfect continuous tense?",
@@ -60,9 +60,9 @@ const QuizQuestion = [
             "I eat rice",
             "I was eating rice",
             "I have eaten rice",
-            "I have been eating rice for 1 year"
+            "I had been eating rice for 1 year"
         ],
-        "answer": "I have been eating rice for 1 year"
+        "answer": "I had been eating rice for 1 year"
     },
     {
         "title": "Which sentence is future continuous tense?",
@@ -98,21 +98,22 @@ const QuizQuestion = [
 
 
 
-
+let score = 0;
 const questionContainer = document.getElementById("mcqContainer");
 QuizQuestion.forEach(question => {
     // console.log(question);
-    let score = 0;
+
     const radioButtoValue = (option, answer) => {
 
-        console.log(option);
-        console.log(answer);
+        // console.log(option);
+        // console.log(answer);
         if (option === answer) {
             score++;
         }
         console.log(score);
 
     }
+
     const div = document.createElement('div');
 
     const ul = document.createElement('ul');
@@ -136,38 +137,7 @@ QuizQuestion.forEach(question => {
     heading.innerText = question.title;
     div.classList.add('mcqBox');
 
-    div.appendChild(heading)
-    div.appendChild(ul)
-    // <label>  <input onClick={() => radioButtoValue(option)} type="radio" id="html" name={id} value={option} /> {option} </label>
+    div.appendChild(heading);
+    div.appendChild(ul);
     questionContainer.appendChild(div);
 });
-
-
-
-const answerEls = document.querySelectorAll('.answer');
-console.log(answerEls)
-let score = 0;
-
-function getSelected() {
-    let result;
-    answerEls.forEach(answerEl => {
-        if (answerEl.checked) {
-            result = answerEl.name
-        }
-    })
-    return result
-}
-
-
-document.getElementById("submit").addEventListener('click', () => {
-    QuizQuestion.forEach(question => {
-        const result = getSelected();
-        if (result) {
-            if (result === question.answer) {
-                score++
-            }
-        }
-    })
-
-    console.log(score);
-})

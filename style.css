@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Rosario&display=swap');
 
+/* -------------------------------------
+            Start Page
+---------------------------------------- */
 .homePage{
     background-color:#E0CABC;
     font-family: 'Raleway', sans-serif;
@@ -37,7 +40,7 @@
     font-size: 25px;
     line-height: 29px;
 }
-.start-card a{
+.button1{
     padding: 22px 180px;
     font-weight: 700;
     font-size: 25px;
@@ -101,3 +104,58 @@
     margin-right: 10px;
 }
 
+/*------------------------------- 
+            Result Page 
+ -------------------------------*/
+ .resultPage{
+    background: linear-gradient(269.85deg, #FFDF64 0.12%, #F4D456 99.86%);
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .resultContainer{
+    width: 435px;
+    height: 563px;
+    left: 743px;
+    top: 258px;
+    height: 500px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 50px;
+    
+ }
+ .resultCard{
+    text-align: center;
+ }
+ .resultContainer img{
+    width: 316px;
+    height: 275px;
+ }
+ .resultContainer h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+ }
+ .resultContainer p{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    color: #373434;
+ }
+
+ /* -----------------------------
+        Time Out Page
+ --------------------------------*/
+.TimeOutPage{
+    background: linear-gradient(269.85deg, #FF646D 0.12%, #F45656 99.86%);
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
