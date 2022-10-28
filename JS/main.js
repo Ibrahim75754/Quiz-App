@@ -96,48 +96,10 @@ const QuizQuestion = [
     }
 ];
 
+const totalQuestion = QuizQuestion.length;
 
 
-let score = 0;
-const questionContainer = document.getElementById("mcqContainer");
-QuizQuestion.forEach(question => {
-    // console.log(question);
+document.getElementById("totalQuestion").innerText = totalQuestion;
+document.getElementById("totalTime").innerText = totalQuestion;
 
-    const radioButtoValue = (option, answer) => {
-
-        // console.log(option);
-        // console.log(answer);
-        if (option === answer) {
-            score++;
-        }
-        console.log(score);
-
-    }
-
-    const div = document.createElement('div');
-
-    const ul = document.createElement('ul');
-    question.options.forEach(option => {
-        // console.log(question);
-        const li = document.createElement('li')
-        const input = document.createElement('input')
-        input.setAttribute('type', 'radio')
-        input.setAttribute('name', question.title)
-        const level = document.createElement('label')
-        input.addEventListener('click', () => {
-            radioButtoValue(option, question.answer);
-        })
-        level.innerText = option;
-        li.appendChild(input)
-        li.appendChild(level)
-        ul.appendChild(li)
-    })
-
-    const heading = document.createElement('h2')
-    heading.innerText = question.title;
-    div.classList.add('mcqBox');
-
-    div.appendChild(heading);
-    div.appendChild(ul);
-    questionContainer.appendChild(div);
-});
+export default QuizQuestion;

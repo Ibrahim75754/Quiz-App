@@ -14,10 +14,13 @@
         <div class="resultCard">
             <img src="/img/congrats.png" alt="">
             <h1>MCQ Result</h1>
-            <p>You Got 7 Score</p>
+            <p>You Got <span id="result"></span> Score</p>
             <a class="finishButton" href="mcqPage.html">START AGAIN</a>
         </div>
     </div>
+    <script>
+        document.getElementById("result").innerText = localStorage.getItem("result")
+    </script>
 </body>
 
 </html>
