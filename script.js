@@ -97,39 +97,47 @@ const QuizQuestion = [
 ];
 
 
-const radioButtoValue = (option) => {
-    console.log(option)
-}
+
+
 const questionContainer = document.getElementById("mcqContainer");
 QuizQuestion.forEach(question => {
+    // console.log(question);
+    let score = 0;
+    const radioButtoValue = (option, answer) => {
 
+        console.log(option);
+        console.log(answer);
+        if (option === answer) {
+            score++;
+        }
+        console.log(score);
 
+    }
     const div = document.createElement('div');
+
+    const ul = document.createElement('ul');
+    question.options.forEach(option => {
+        // console.log(question);
+        const li = document.createElement('li')
+        const input = document.createElement('input')
+        input.setAttribute('type', 'radio')
+        input.setAttribute('name', question.title)
+        const level = document.createElement('label')
+        input.addEventListener('click', () => {
+            radioButtoValue(option, question.answer);
+        })
+        level.innerText = option;
+        li.appendChild(input)
+        li.appendChild(level)
+        ul.appendChild(li)
+    })
+
+    const heading = document.createElement('h2')
+    heading.innerText = question.title;
     div.classList.add('mcqBox');
 
-    div.innerHTML = `
-        <h3 id="">${question.title}</h3>
-        <li>
-            <input onclick={radioButtoValue("${question.options[0]}")} type="radio" name="${question.title}" class="answer" value=${question.options[0]}>
-            <label for="">${question.options[0]}</label>
-        </li>
-        <li>
-            <input onclick={radioButtoValue("${question.options[1]}")} type="radio" name="${question.title}" class="answer">
-            <label for="">${question.options[1]}</label>
-        </li>
-        <li>
-            <input onclick={radioButtoValue("${question.options[2]}")} type="radio" name="${question.title}" class="answer">
-            <label for="">${question.options[2]}</label>
-        </li>
-        <li>
-            <input onclick={radioButtoValue("${question.options[3]}")} type="radio" name="${question.title}" class="answer">
-            <label for="">${question.options[3]}</label>
-        </li>
-        <li>
-        <label>  <input onclick={radioButtoValue("${question.options[3]}")} type="radio" id="html" name="${question.title}" value="${question.options[3]}" /> ${question.options[3]} </label> </div>
-        </li>
-        
-        `;
+    div.appendChild(heading)
+    div.appendChild(ul)
     // <label>  <input onClick={() => radioButtoValue(option)} type="radio" id="html" name={id} value={option} /> {option} </label>
     questionContainer.appendChild(div);
 });
