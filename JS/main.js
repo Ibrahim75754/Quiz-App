@@ -101,5 +101,3 @@ const totalQuestion = QuizQuestion.length;
 
 document.getElementById("totalQuestion").innerText = totalQuestion;
 document.getElementById("totalTime").innerText = totalQuestion;
-
-export default QuizQuestion;
