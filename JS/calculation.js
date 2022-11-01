@@ -97,6 +97,7 @@ const QuizQuestion = [
 ];
 
 let score = 0;
+let serial = 1;
 
 const questionContainer = document.getElementById("mcqContainer");
 QuizQuestion.forEach(question => {
@@ -129,12 +130,14 @@ QuizQuestion.forEach(question => {
     })
 
     const heading = document.createElement('h2')
-    heading.innerText = question.title;
+    heading.innerText = serial + ". " + question.title;
     div.classList.add('mcqBox');
 
     div.appendChild(heading);
     div.appendChild(ul);
     questionContainer.appendChild(div);
+
+    serial++;
 });
 
 

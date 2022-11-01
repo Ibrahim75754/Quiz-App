@@ -68,10 +68,29 @@
     margin-top: 25px;
 }
 .mcq-part{
+    margin-top: 150px;
     display: grid;
     justify-content: center;
 }
-.topBar{
+.topContainer{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+.topContent{
+    padding: 25px;
+    background: #FFFFFF;
+    border: 2px solid #B0B8FF;
+    border-radius: 20px;
+    width: 773px;
+    margin-top: 25px;
+}
+
+.topBar{ 
     display: flex;
     justify-content: space-between;
     align-items: center;
